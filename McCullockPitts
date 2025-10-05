@@ -1,1 +1,55 @@
+import numpy as np
 
+# Entradas posibles de la compuerta OR
+entradas = np.array([
+    [0, 0],
+    [0, 1],
+    [1, 0],
+    [1, 1]
+])
+
+# Pesos (representan la fuerza de cada entrada)
+pesos = np.array([1, 1])
+
+# Umbral o bias (para controlar cuándo se activa la neurona)
+bias = -0.5
+
+def neurona_or(x):
+    # Calcula la suma ponderada de las entradas
+    suma = np.dot(x, pesos) + bias
+    # Función de activación: si la suma es mayor o igual a 0, la neurona se activa (1)
+    return 1 if suma >= 0 else 0
+
+# Probamos la neurona con todas las combinaciones
+salidas = [neurona_or(x) for x in entradas]
+
+print("Entradas:\n", entradas)
+print("Salidas OR:\n", salidas
+
+
+
+________________________________________________________________________________________________________________________________________
+
+
+import numpy as np
+
+# Entradas posibles de la compuerta NOT
+entradas = np.array([0, 1])
+
+# Peso (negativo para invertir la señal)
+peso = -1
+
+# Bias (compensa para que el 0 se vuelva 1)
+bias = 0.5
+
+def neurona_not(x):
+    # Suma ponderada
+    suma = x * peso + bias
+    # Activación: 1 si la suma >= 0, 0 en caso contrario
+    return 1 if suma >= 0 else 0
+
+# Probamos la neurona
+salidas = [neurona_not(x) for x in entradas]
+
+print("Entradas:", entradas)
+print("Salidas NOT:", salidas)
