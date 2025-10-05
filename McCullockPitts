@@ -26,7 +26,8 @@ salidas = [neurona_or(x) for x in entradas]
 print("Entradas:\n", entradas)
 print("Salidas OR:\n", salidas
 
-
+#Esta neuron a diferencia de La diferencia entre la neurona OR y la neurona AND está principalmente en los pesos y el bias (umbral)
+#En la entrada AND, la neurona solo se activa si las dos entradas son 1, por lo tanto, necesita una suma mayor para alcanzar el umbral.
 
 ________________________________________________________________________________________________________________________________________
 
@@ -53,3 +54,9 @@ salidas = [neurona_not(x) for x in entradas]
 
 print("Entradas:", entradas)
 print("Salidas NOT:", salidas)
+
+
+#En esta neurona, lo que hacemos es invertir la señal de entrada.
+#En este ejemplo, la neurona funciona como un pequeño interruptor que hace lo contrario de lo que recibe.
+#Si le damos un 0, responde con un 1.
+#Si le damos un 1, responde con un 0.
